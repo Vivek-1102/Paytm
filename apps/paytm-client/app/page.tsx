@@ -1,12 +1,10 @@
-import Image from "next/image";
-import { Button } from "@repo/ui/button";
-import styles from "./page.module.css";
-import { PrismaClient } from "@repo/db/client";
+"use client";
 
-export default function Home() {
-  return (
-   <>
-   <h1 className="text-4xl font-black text-gray-900 dark:text-red ">Hello there!</h1>
-   </>
-  );
+import { useBalance } from "@repo/store/useBalance";
+
+export default function() {
+  const balance = useBalance();
+  return <div>
+    hi there {balance} this is clients app
+  </div>
 }

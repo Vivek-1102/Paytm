@@ -3,18 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo --port 3001",
+    "dev": "next dev --port 3001",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@repo/ui": "*",
+    "@repo/db": "*",
+    "@repo/store": "*",
     "@repo/tailwind-config": "*",
+    "@repo/ui": "*",
+    "@types/bcrypt": "^5.0.2",
+    "bcrypt": "^5.1.1",
     "next": "14.2.6",
+    "next-auth": "^4.24.10",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "@repo/db": "*"
+    "recoil": "^0.7.7"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
@@ -22,11 +27,11 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.18",
     "eslint": "^8",
     "eslint-config-next": "14.2.6",
-    "typescript": "^5",
-    "autoprefixer": "^10.4.18",
     "postcss": "^8.4.35",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }
